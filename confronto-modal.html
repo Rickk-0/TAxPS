@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confronto Torre Angela e Passoscuro</title>
+    <link rel="stylesheet" href="confronto-modal.css">
+</head>
+<body>
+    <!-- Modal del confronto con schede -->
+    <div id="compareModal" class="modal">
+        <div class="modal-content">
+
+            <!-- Pulsante di chiusura (x)-->
+            <span class="close">&times;</span>
+            <h2>Torre Angela e Passoscuro: Due Facce di Roma</h2>
+
+            <!--Definizione delle "schede"-->
+            <div class="tabs">
+                <button class="tab-button active" data-tab="storia">Storia</button>
+                <button class="tab-button" data-tab="cultura">Cultura e Vita Quotidiana</button>
+                <button class="tab-button" data-tab="territorio">Territorio e Paesaggio</button>
+            </div>
+            
+            <!-- Tab Storia -->
+            <div id="storia" class="tab-content active">
+                <h3 class="category-title">Le origini e la storia</h3>
+                
+                <div class="comparison-grid">
+                    <div class="place-card">
+                        <img src="images/torre-angela-storia.jpg" alt="Storia di Torre Angela">
+                        <div class="place-info">
+                            <h3>Torre Angela</h3>
+                            <p>Inserire paragrafo(Storia) 1</p>
+                            <p>Inserire paragrafo(Storia) 2</p>
+                            <p>Inserire paragrafo(Storia) 3</p>
+                        </div>
+                    </div>
+                    
+                    <div class="place-card">
+                        <img src="images/passoscuro-storia.jpg" alt="Storia di Passoscuro">
+                        <div class="place-info">
+                            <h3>Passoscuro</h3>
+                            <p>Passoscuro ha una storia legata al suo rapporto con il mare e alla bonifica dell'Agro Romano. Il nome stesso, "Passoscuro", pare derivare da un antico guado ("passo") sul fosso omonimo che risultava difficile da attraversare ("scuro").</p>
+                            <p>L'area fu oggetto delle grandi bonifiche del litorale romano iniziate alla fine dell'800 e proseguite durante il periodo fascista. Prima di allora, la zona era caratterizzata da paludi e acquitrini che rendevano l'area quasi inabitabile a causa della malaria.</p>
+                            <p>Dopo la bonifica, Passoscuro si sviluppò prima come piccolo borgo di pescatori e successivamente, dal dopoguerra in poi, come località balneare per i romani in cerca di refrigerio durante i mesi estivi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tab Cultura -->
+            <div id="cultura" class="tab-content">
+                <h3 class="category-title">Vita quotidiana e cultura locale</h3>
+                
+                <div class="comparison-grid">
+                    <div class="place-card">
+                        <img src="images/torre-angela-cultura.jpg" alt="Cultura di Torre Angela">
+                        <div class="place-info">
+                            <h3>Torre Angela</h3>
+                            <p>Inserire paragrafo(Cultura) 1</p>
+                            <p>Inserire paragrafo(Cultura) 2</p>
+                            <p>Inserire paragrafo(Cultura) 3</p>
+                        </div>
+                    </div>
+                    
+                    <div class="place-card">
+                        <img src="images/passoscuro-cultura.jpg" alt="Cultura di Passoscuro">
+                        <div class="place-info">
+                            <h3>Passoscuro</h3>
+                            <p>Passoscuro mantiene ancora oggi l'atmosfera di un borgo marinaro, con un forte legame con le tradizioni legate al mare e alla pesca. La vita sociale segue il ritmo delle stagioni, con una grande differenza tra i tranquilli mesi invernali e la vivace stagione estiva.</p>
+                            <p>La cultura locale è fortemente influenzata dalle tradizioni marinare, con eventi e feste dedicate al mare e alla pesca. La gastronomia locale riflette questo legame, con una forte presenza di piatti a base di pesce fresco.</p>
+                            <p>Durante l'estate, Passoscuro cambia volto accogliendo numerosi visitatori e vacanzieri, che animano le spiagge e le attività commerciali. Questo ha creato una doppia identità: il tranquillo borgo marinaro dei mesi invernali e la vivace località balneare estiva.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tab Territorio -->
+            <div id="territorio" class="tab-content">
+                <h3 class="category-title">Territorio e ambiente</h3>
+                
+                <div class="comparison-grid">
+                    <div class="place-card">
+                        <img src="images/torre-angela-territorio.jpg" alt="Territorio di Torre Angela">
+                        <div class="place-info">
+                            <h3>Torre Angela</h3>
+                            <p>Inserire paragrafo(Territorio) 1</p>
+                            <p>Inserire paragrafo(Territorio) 2</p>
+                            <p>Inserire paragrafo(Territorio) 3</p>
+                        </div>
+                    </div>
+                    
+                    <div class="place-card">
+                        <img src="images/passoscuro-territorio.jpg" alt="Territorio di Passoscuro">
+                        <div class="place-info">
+                            <h3>Passoscuro</h3>
+                            <p>Passoscuro si estende lungo la costa tirrenica, caratterizzata da ampie spiagge sabbiose e una pineta costiera che rappresenta un importante polmone verde per l'area. Il paesaggio è dominato dall'elemento naturale del mare e dalla vegetazione tipica della macchia mediterranea.</p>
+                            <p>L'area conserva ancora ampie zone naturali e non urbanizzate, con la presenza dell'Oasi di Macchiagrande, un'importante area protetta che ospita una ricca biodiversità, sia vegetale che animale.</p>
+                            <p>L'urbanizzazione di Passoscuro è più contenuta e rarefatta rispetto alle zone interne, con prevalenza di ville, case singole e piccole strutture turistiche. La vicinanza all'aeroporto internazionale di Fiumicino rappresenta sia un'opportunità che una sfida per il territorio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="javascript/confronto-modal.js"> </script>
+</body>
+</html>

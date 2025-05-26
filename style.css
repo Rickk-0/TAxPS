@@ -1,0 +1,430 @@
+/* Importazione font Google per migliorare la tipografia */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset di base e stili generali */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colore-hover-base: rgb(39, 159, 193);
+    --colore-chiaro: #f4f4f6;
+    --colore-scuro: #111;
+    --colore-accent: #ff6b6b; /* Nuovo colore accent */
+}
+
+body {
+    font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.navbar .main-menu ul {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li a {
+    padding: 10px 20px;
+    display: block;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.navbar ul li a:hover {
+    color: var(--colore-hover-base);
+}
+
+.navbar ul li a i {
+    margin-right: 10px;
+}
+
+.navbar ul li:last-child a {
+    margin-left: 10px;
+    border-radius: 50px;
+    padding: 10px 25px;
+    background-color: var(--colore-scuro);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li:last-child a:hover {
+    background-color: var(--colore-hover-base);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(39, 159, 193, 0.3);
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f9f9f9;
+    padding: 100px 0 80px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background: linear-gradient(135deg, rgba(244,244,246,1) 0%, rgba(233,233,240,1) 100%);
+}
+
+.hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    color: var(--colore-scuro);
+    text-shadow: 2px 2px 0px rgba(39, 159, 193, 0.2);
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #555;
+}
+
+/* Sezione introduttiva */
+.intro-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.intro-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.intro-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.intro-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.intro-card-content {
+    padding: 25px;
+}
+
+.intro-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--colore-scuro);
+}
+
+.intro-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Hero Buttons - MIGLIORAMENTO DIMENSIONI E VISIBILITÀ */
+.hero-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px; /* Aumentato ulteriormente lo spazio tra i pulsanti */
+    margin-top: 60px;
+    width: 100%;
+}
+
+.image-button {
+    position: relative;
+    flex: 0 0 auto;
+    width: 350px; /* Aumentato da 300px */
+    height: 250px; /* Aumentato da 200px */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Testo dei pulsanti - MIGLIORAMENTO VISIBILITÀ */
+.image-button span {
+    position: relative;
+    z-index: 10;
+    color: white;
+    font-size: 2.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease;
+}
+
+/* Effetto hover migliorato */
+.image-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay scuro iniziale leggermente più intenso */
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.image-button:hover::before {
+    background-color: rgba(39, 159, 193, 0.7); /* Overlay colorato al passaggio del mouse */
+}
+
+.image-button:hover span {
+    transform: scale(1.1);
+}
+
+.image-button:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Transizione fluida per tutti gli effetti */
+.image-button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Footer */
+.footer {
+    padding: 60px 0 40px;
+    background-color: var(--colore-scuro);
+    color: #fff;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.footer img {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #222;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.card h4 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.card form input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card form input:focus {
+    outline: 2px solid var(--colore-hover-base);
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.fab {
+    font-size: 24px;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fab:hover {
+    color: var(--colore-hover-base);
+    transform: translateY(-5px);
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container-sm {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    background: var(--colore-chiaro);
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background: var(--colore-hover-base);
+    color: #fff;
+}
+
+.btn-dark {
+    background: var(--colore-scuro);
+    color: #fff;
+}
+
+.btn-accent {
+    background: var(--colore-accent);
+    color: #fff;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* Text Classes */
+.text-xxl{
+    font-size: 4rem; /* Aumentato da 3rem */
+    line-height: 1.1;
+    font-weight: 800;
+    margin: 40px 0 20px;
+}
+
+.text-xl{
+    font-size: 2.4rem;
+    line-height: 1.3;
+    font-weight: 700;
+    margin: 40px 0 20px;
+}
+
+.text-lg{
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: 600;
+    margin: 30px 0 20px;
+}
+
+.text-md{
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 20px 0 10px;
+}
+
+.text-sm{
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* Media queries per responsività */
+@media(max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+    
+    .main-menu ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .text-xxl {
+        font-size: 3rem;
+    }
+    
+    /* Responsività per i bottoni su schermi piccoli */
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .image-button {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 30px;
+    }
+    
+    .intro-cards {
+        grid-template-columns: 1fr;
+    }
+}
