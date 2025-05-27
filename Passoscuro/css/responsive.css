@@ -1,0 +1,725 @@
+/* ===== RESPONSIVE CSS FOR PASSOSCURO WEBSITE ===== */
+
+/* Base responsive settings */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== NAVIGATION RESPONSIVE ===== */
+@media screen and (max-width: 1024px) {
+    .headerNav {
+        padding: 0 20px;
+    }
+    
+    .headerHome {
+        gap: 20px;
+    }
+    
+    .headerHome li a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .headerNav {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+    
+    .headerHome {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .headerHome li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .headerHome li a {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    .menu-search {
+        order: -1;
+        width: 100%;
+    }
+    
+    .search-box {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .search-box input {
+        width: calc(100% - 50px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .headerNav {
+        padding: 10px;
+    }
+    
+    .headerHome {
+        gap: 5px;
+    }
+    
+    .headerHome li a {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* ===== HEADER CONTENT RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+    .header-content h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .header-content p {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    
+    .title-separatore {
+        width: 80px;
+        height: 2px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .header-content p {
+        font-size: 0.9rem;
+        padding: 0 15px;
+    }
+}
+
+/* ===== INTRO SECTION RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+    .main-intro-content {
+        padding: 40px 20px;
+    }
+    
+    .main-intro-content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    
+    .main-intro-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-intro-content {
+        padding: 30px 15px;
+    }
+    
+    .main-intro-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .main-intro-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* ===== TIMELINE RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+    .timeline-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .timeline-item {
+        text-align: center;
+        max-width: none;
+    }
+    
+    .timeline-icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .timeline-item h4 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+    
+    .timeline-item p {
+        font-size: 0.9rem;
+    }
+    
+    .timeline-bar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .timeline-container {
+        gap: 25px;
+        padding: 0 15px;
+    }
+    
+    .timeline-icon {
+        font-size: 1.8rem;
+    }
+    
+    .timeline-item h4 {
+        font-size: 1rem;
+    }
+    
+    .timeline-item p {
+        font-size: 0.8rem;
+    }
+}
+
+/* ===== STORIA SECTION RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+    .main-storia-content {
+        padding: 0 20px;
+    }
+    
+    .header-storia h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .header-storia p {
+        font-size: 1rem;
+    }
+    
+    .title-box-storia h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    .p-img {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .p-storia {
+        order: 2;
+    }
+    
+    .img-tucul {
+        order: 1;
+        text-align: center;
+    }
+    
+    .img-tucul img {
+        max-width: 300px;
+        width: 100%;
+    }
+    
+    .p-img-secondwarwordl {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .img-salvodacquisto,
+    .img-torredipalidoro {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-storia-content {
+        padding: 0 15px;
+    }
+    
+    .header-storia h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .header-storia p {
+        font-size: 0.9rem;
+    }
+    
+    .title-box-storia h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    .p-storia p,
+    .p-secondwarworld p,
+    .p-torredipalidoro p,
+    .p-dopoguerra p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: justify;
+    }
+    
+    .img-tucul img {
+        max-width: 250px;
+    }
+    
+    .img-salvodacquisto,
+    .img-torredipalidoro {
+        max-width: 200px;
+    }
+}
+
+/* ===== TORRE DI PALIDORO 3D MODEL RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+    .p-3d-torredipalidoro {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .torre-modello-3d-torredipalidoro {
+        width: 100%;
+        height: 300px;
+    }
+    
+    .torre-modello-3d-torredipalidoro model-viewer {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .torre-modello-3d-torredipalidoro {
+        height: 250px;
+    }
+}
+
+/* ===== COSA VEDERE SECTION RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+    .title-cosavedere h1 {
+        font-size: 2rem;
+        padding: 0 20px;
+    }
+    
+    .frase-sotto-altitolo p {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    
+    .cosavedere {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .primaCard-cosavedere,
+    .secondaCard-cosavedere,
+    .terzaCard-cosavedere {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .primaCard-cosavedere img,
+    .secondaCard-cosavedere img,
+    .terzaCard-cosavedere img {
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .didascalia-statua h3,
+    .didascalia-murales h3,
+    .didascalia-macchiaDiPalidoro h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .didascalia-statua p,
+    .didascalia-murales p,
+    .didascalia-macchiaDiPalidoro p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title-cosavedere h1 {
+        font-size: 1.6rem;
+        padding: 0 15px;
+    }
+    
+    .frase-sotto-altitolo p {
+        font-size: 0.9rem;
+        padding: 0 15px;
+    }
+    
+    .cosavedere {
+        gap: 25px;
+        padding: 0 15px;
+    }
+    
+    .primaCard-cosavedere img,
+    .secondaCard-cosavedere img,
+    .terzaCard-cosavedere img {
+        height: 180px;
+    }
+    
+    .didascalia-statua h3,
+    .didascalia-murales h3,
+    .didascalia-macchiaDiPalidoro h3 {
+        font-size: 1.1rem;
+    }
+    
+    .didascalia-statua p,
+    .didascalia-murales p,
+    .didascalia-macchiaDiPalidoro p {
+        font-size: 0.85rem;
+    }
+}
+
+/* ===== COSA FARE SECTION RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+    .title-cosafare h1 {
+        font-size: 2rem;
+        padding: 0 20px;
+    }
+    
+    .frase-cosafare p {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    
+    .cosafare {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .primaCard-cosafare,
+    .secondaCard-cosafare,
+    .terzaCard-cosafare {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .primaCard-cosafare img,
+    .secondaCard-cosafare img,
+    .terzaCard-cosafare img {
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .didascalia-libri h3,
+    .didascalia-escursioni h3,
+    .didascalia-pesca h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .didascalia-libri p,
+    .didascalia-escursioni p,
+    .didascalia-pesca p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title-cosafare h1 {
+        font-size: 1.6rem;
+        padding: 0 15px;
+    }
+    
+    .frase-cosafare p {
+        font-size: 0.9rem;
+        padding: 0 15px;
+    }
+    
+    .cosafare {
+        gap: 25px;
+        padding: 0 15px;
+    }
+    
+    .primaCard-cosafare img,
+    .secondaCard-cosafare img,
+    .terzaCard-cosafare img {
+        height: 180px;
+    }
+    
+    .didascalia-libri h3,
+    .didascalia-escursioni h3,
+    .didascalia-pesca h3 {
+        font-size: 1.1rem;
+    }
+    
+    .didascalia-libri p,
+    .didascalia-escursioni p,
+    .didascalia-pesca p {
+        font-size: 0.85rem;
+    }
+}
+
+/* ===== MAPPA SECTION RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+    .title-mappa h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .mappa-container {
+        padding: 0 20px;
+    }
+    
+    .mappa-container iframe {
+        width: 100%;
+        height: 300px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title-mappa h1 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+    
+    .mappa-container {
+        padding: 0 15px;
+    }
+    
+    .mappa-container iframe {
+        height: 250px;
+    }
+}
+
+/* ===== FOOTER RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+    .containerButton {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .containerButton p {
+        font-size: 0.9rem;
+        margin: 0;
+    }
+    
+    .socialButtons {
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .socialButtons button {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .socialButtons img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .containerButton {
+        padding: 15px;
+        gap: 10px;
+    }
+    
+    .containerButton p {
+        font-size: 0.8rem;
+    }
+    
+    .socialButtons button {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .socialButtons img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* ===== BACK TO TOP BUTTON RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+/* ===== DIVIDERS RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+    .divider-image,
+    .divider-torre,
+    .divider-dopoguerra,
+    .divider-cosavedere,
+    .divider-mappa {
+        height: 60px;
+        margin: 30px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .divider-image,
+    .divider-torre,
+    .divider-dopoguerra,
+    .divider-cosavedere,
+    .divider-mappa {
+        height: 40px;
+        margin: 20px 0;
+    }
+}
+
+/* ===== GENERAL TEXT IMPROVEMENTS FOR MOBILE ===== */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem !important;
+        line-height: 1.3;
+    }
+    
+    h2 {
+        font-size: 1.3rem !important;
+        line-height: 1.3;
+    }
+    
+    h3 {
+        font-size: 1.1rem !important;
+        line-height: 1.3;
+    }
+    
+    p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: justify;
+    }
+    
+    strong {
+        font-weight: 600;
+    }
+}
+
+/* ===== HOVER EFFECTS DISABLED ON TOUCH DEVICES ===== */
+@media (hover: none) and (pointer: coarse) {
+    .img-hover-effetto:hover .img-hover-testo {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .img-hover-effetto .img-hover-testo {
+        opacity: 1;
+        visibility: visible;
+        position: static;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
+}
+
+/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
+@media screen and (max-width: 768px) {
+    /* Increase touch target sizes */
+    button,
+    a,
+    input {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Improve contrast for small text */
+    small,
+    .small-text {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+}
+
+/* ===== LANDSCAPE ORIENTATION ADJUSTMENTS ===== */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .header-content {
+        padding: 20px 0;
+    }
+    
+    .header-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .timeline-section {
+        padding: 30px 0;
+    }
+    
+    .timeline-container {
+        gap: 20px;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    .headerNav,
+    .back-to-top,
+    .socialButtons,
+    .search-box {
+        display: none !important;
+    }
+    
+    .mappa-container iframe {
+        display: none;
+    }
+    
+    .mappa-container::after {
+        content: "Mappa disponibile online su Google Maps";
+        display: block;
+        text-align: center;
+        padding: 20px;
+        background: #f5f5f5;
+        border: 1px solid #ddd;
+    }
+}
