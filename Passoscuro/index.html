@@ -22,6 +22,7 @@
         <link rel = "stylesheet" href = "css/buttons/backToTop.css">
         <link rel = "stylesheet" href = "css/footer/footer.css">
         <link rel = "stylesheet" href = "css/responsive.css">
+        <link rel="stylesheet" href="../style.css">
         <link rel = "icon" href = "assets/MyTowe.png" type = "image/x-icon"> <!-- link per mettere il favicon accanto al nome del sito-->
         <script type = "module" src = "https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     </head>
@@ -29,27 +30,51 @@
     <body> <!-- contiene il contenuto principale visibile della pagina web -->
         
         <header> <!-- utilizzato per definire l'intestazione di una pagina o di una sezione -->
-            <div class = "container">
-                <div class = "header-content">
-                    <h2>Benvenuti a Passoscuro</h2>
-                    <div class = "title-separatore"> </div>
-                    <p>Località balneare sul litorale romano</p>
-                </div>
-            </div>
-            
-                <!-- creazione del menù -->
-                <nav class = "headerNav">
-                    <div class = "logo" >
-                        <img src = "assets/MyTowe.png" alt = "Logo del sito">
-                    </div>
-                    <ul class = "headerHome">
-                            <li><a href = "#Home">Home</a></li>
-                            <li><a href = "#Storia">Storia</a></li>
-                            <li><a href = "#CosaVedere">Cosa vedere</a></li>
-                            <li><a href = "#CosaFare">Cosa fare</a></li>
-                            <li><a href = "#Mappa">Mappa</a></li>
 
-                            <!-- PARTE DEL BOX DELLA RICERCA -->
+
+        <style>
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 999;
+                background-color: white;
+            }
+
+            body {
+                padding-top: 80px;
+            }
+        </style>
+
+
+
+            <nav class="navbar">
+                <div class="container">
+                    
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/MyTowe.png" alt="logo">
+                        </a>
+                    </div>
+
+                    <div class="main-menu">
+                        <ul>
+                            <li>
+                                <a href="index.html"> Home </a>
+                            </li>
+                            <li>
+                                <a href="#Storia">Storia </a>
+                            </li>
+                            <li>
+                                <a href="#CosaVedere"> Cosa vedere </a>
+                            </li>
+                            <li>
+                                <a href="#CosaFare"> Cosa fare </a>
+                            </li>
+                            <li>
+                                <a href="#Mappa"> Mappa </a>
+                            </li>
                             <li class = "menu-search">
                                 <div class = "search-swapper">
                                         <div class = "search-box">
@@ -73,8 +98,20 @@
                                         </div>
                                 </div>
                             </li>
-                    </ul>
-                </nav>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <br>
+
+            <div class = "container">
+                <div class = "header-content">
+                    <h2>Benvenuti a Passoscuro</h2>
+                    <div class = "title-separatore"> </div>
+                    <p>Località balneare sul litorale romano</p>
+                </div>
+            </div>
         </header>
 
 
