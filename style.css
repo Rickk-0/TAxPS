@@ -66,10 +66,30 @@ img {
 }
 
 .navbar ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--colore-scuro);
+    padding-bottom: 4px; 
+
     padding: 10px 20px;
     display: block;
     font-weight: 600;
     transition: all 0.2s ease;
+}
+
+.navbar ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background-color: var(--colore-hover-base);
+    transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover::after{
+    width: 100%;
 }
 
 .navbar ul li a:hover {
@@ -228,7 +248,7 @@ img {
 }
 
 .image-button:hover::before {
-    background-color: rgba(39, 159, 193, 0.7); /* Overlay colorato al passaggio del mouse */
+    background-color: inherit; /* Overlay colorato al passaggio del mouse */
 }
 
 .image-button:hover span {
