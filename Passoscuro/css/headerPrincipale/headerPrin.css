@@ -1,0 +1,52 @@
+/* SEZIONE PER L'HEADER E IL TITOLO DELLA PAGINA */
+
+/* posizionamento base dell'header */
+header {
+    width: 100%;
+    position: relative; /* non cambia la posizione visibile dell'elemento, ma serve come ancora di riferimento */
+}
+
+/* stile del testo del titolo */
+.header-content h2 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    margin-left: 50px;
+    margin: 0 auto;
+}
+
+/* BARRA DECORATIVA SOTTO AL TITOLO */
+
+/* stile dell'intestazione principale con gradiente */
+.header-content {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); /* contrasto di colori nella barra */
+    color: white; /* colore della scritta del titolo */
+    padding: 3rem 0; /* dimensione della barra decorativa */
+    text-align: center; /* mette al centro la scritta del titolo della pagina */
+    width: 100%;
+    margin: 0;
+}
+
+.headerNav a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* per mettere la linea separatore */
+.title-separatore {
+    width: 80%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 30px auto 10px auto;
+}
+
+/* PARTE DEL MINI PARAGRAFO <p> DI PASSOSCURO */
+
+.header-content p {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px; /* per mantenere lo spazio sopra */
+    margin-bottom: 0; /* per rimuovere lo spazio sotto */
+}

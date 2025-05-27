@@ -1,0 +1,311 @@
+/* PARTE DI CODICE CHE MODIFICA LO STILE DELLA SEZIONE STORIA */
+
+.titolo-storia-content {
+    position: relative;
+}
+
+/* stile della parola storia */
+.storia-slide-in {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 2.8rem;
+    position: relative;
+    left: -100%;
+    opacity: 0;
+    display: inline-block;
+}
+
+.storia-slide-in.visible {
+    animation: slideIn 1.7s ease-out forwards; 
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        left: 48%;
+        transform: translateX(-50%);
+    }
+}
+
+/* la linea orizzontale sotto alla parola storia */
+.storia-bar {
+    margin-top: 0.1rem;
+    width: 50%;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 3px;
+    position: absolute; 
+    left: 0;
+    opacity: 0; /* inizia invisibile */
+    transform: translateX(-50%);
+}
+
+/* animazione della bar */
+.storia-bar.visible {
+    animation: slideIn 1.7s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        left: 0;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        left: 48%;
+        transform: translateX(-50%);
+    }
+}
+
+/* creazione del box che riguarda la storia di Passoscuro */
+.main-storia-content {
+    width: 100%;
+    max-width: 1350px; /* aumenta la larghezza del box */
+    min-height: 2300px; /* per impostare un'altezza minima del box principale */
+    top: -85px; /* per levare spazio tra il titolo e la box principale */
+    margin: 4rem auto;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    padding-top: 1rem;
+    position: relative;
+    padding: 2rem 2rem; /* aumenta la grandezza del box all'interno */
+}
+
+.header-storia h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+}
+.header-storia p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+/* effetto sollevamento al passaggio */
+.main-storia-content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* header interno */
+.header-storia {
+    background-color: var(--primary-color);
+    color:white;
+    padding: 1.5rem 2rem;
+    max-width: 100%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* assegnare una position relative */
+.title-box-storia {
+    position: relative;
+}
+
+/* le origini e l'inizio di passoscuro */
+.title-box-storia h3 {
+    position: relative; /* l'elemento rimane nel flusso del layout, ma si può spostare visivamente */
+    top: 2rem; /* per abbassare il titolo */
+    padding: 0.5rem 1rem 1rem 1rem; /* meno spazio sotto al titolo */ /* TOP RIGHT BOTTOM LEFT */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: var(--dark-color);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* la linea sotto al titolo "le origini e l'inizio di passoscuro" */
+.orgini-inizionovecento-bar {
+    margin-top: 1rem; 
+    margin-bottom: 1rem;
+    right: 5rem;
+    width: 29%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    position: absolute; /* posizione assoluta rispetto al contenitore relativo */
+    left: 2rem; /* per spostarla più a destra */
+    top: 3.5rem; /* per abbassarla */
+}
+
+/* modifiche al testo p del primo paragrafo */
+.text-storia p {
+    line-height: 1.6;
+    color: var(--dark-color);
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    max-width: 800px;
+}
+
+/* per mettere paragrafo e immagine uno accanto all'altro */
+.p-img {
+    display: flex;
+    gap: 1rem; /* spazio tra paragrafo e immagine */
+    align-items:center; /* allinea in alto */
+}
+
+/* contenitore del testo */
+.p-storia {
+    flex: 1 1 60%;
+}
+
+/* modifiche all'immagine con l'effetto */
+.img-tucul img {
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* effetto zoom al passaggio */
+.img-tucul img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.title-secondwarworld-storia {
+    position: relative;
+}
+
+/* passoscuro durante la seconda guerra mondiale */
+.title-secondwarworld-storia h3 {
+    padding: 0.5rem 1rem 1rem 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: var(--dark-color);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* la barra sotto al titolo "passoscuro durante la seconda guerra mondiale"*/
+.durantesecondaguerra-bar {
+    margin-top: -1rem; 
+    margin-bottom: 1rem;
+    right: 5rem;
+    width: 41%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    position: absolute; /* posizione assoluta rispetto al contenitore relativo */
+    left: 2rem; /* per spostarla più a destra */
+    top: 3.5rem; /* per abbassarla */
+}
+
+/* modifiche al secondo paragrafo */
+.p-secondwarworld p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--dark-color);
+}
+
+/* immagine di salvo d'acquisto */
+.img-salvodacquisto {
+    position: relative;
+    margin-left: 2rem; /* per spostare l'immagine più a destra */
+    margin-top: 2.5rem; /* per abbassare l'immagine */
+}
+
+/* modifche all'immagine che riguarda salvo d'acquisto */
+.img-salvodacquisto img {
+    max-width: 620px; /* grandezza dell'immagine */
+    border-radius: 10px;
+    height: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    margin-right: 0; /* per far sì che non ci sia spazio a destra */
+}
+
+/* immagine della torre di palidoro */
+.img-torredipalidoro {
+    position: relative;
+    margin-left: 43rem;
+    margin-top: -22rem;
+}
+
+/* modifiche all'immagine che riguarda la torre di palidoro */
+.img-torredipalidoro img {
+    max-width: 620px;
+    border-radius: 10px;
+    height: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* effetto zoom al passaggio del mouse, a tutte e due le immagini */
+.img-salvodacquisto img:hover,
+.img-torredipalidoro img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* contenitore dell'immagine con effetto hover */
+.img-hover-effetto {
+    position: relative; /* per posizionare il testo sopra l'immagine */
+    display: inline-block; /* per far adattare il contenitore si adatti alla dimensione del contenuto */
+    overflow: hidden; /* nasconde ciò che è fuori dai bordi */
+    width: 100%; /* larghezza del contenitore */
+    max-width: 620px; /* larghezza dell'immagine */
+    border-radius: 10px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* per far sì che all'inizio l'immagine sia trasparente */
+.img-hover-effetto img {
+    width: 100%; /* l'immagine va ad occupare tutto lo spazio del contenuto */
+    height: auto; 
+    opacity: 0.3; /* immagine visibile ma velata */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* trasizione del cambiamento di opacità */
+    display: block; /* elimina spazi indesiderati sotto l'immagine */
+    will-change: transform; /* suggerisce al browser di prepararsi a una trasformazione */
+}
+
+/* testo sovrapposto all'immagine */
+.img-hover-testo {
+    position: absolute; /* posizionato sopra l'immagine */
+    top: 50%; /* centrato verticalmente */
+    left: 50%; /* centrato orizzalmente */
+    transform: translate(-50%, -50%); /* sposta il punto di ancoraggio al centro del testo */
+    color: white;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+    z-index: 2; /* per portare effettivamente il testo sopra l'immagine */
+    opacity: 1; 
+    transition: opacity 0.5s ease;
+}
+
+/* quando il mouse passa sopra il contenitore...*/
+
+/*...l'immagine diventa visibile */
+.img-hover-effetto:hover img {
+    opacity: 1; /* per rimuovere la trasparenza */
+    transform: scale(1.05);
+}
+/*...e il testo scompare gradualmente */
+.img-hover-effetto:hover .img-hover-testo {
+    opacity: 0; /* nasconde il testo */
+}
+
+/* SEPARATORE */
+.divider-torre {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.1) 100%);
+    height: 50px;
+    margin: 0.1rem -1rem;
+}
+
+
+
+
+
+  

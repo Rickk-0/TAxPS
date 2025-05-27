@@ -1,0 +1,70 @@
+/* PARTE DEL PULSANTE DEL SEARCH */
+
+/* contenitore principale della ricerca */
+.search-swapper {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+/* stile base dell'input di ricerca */
+.search-box input[type="text"] {
+    padding: 10px 35px 10px 15px;
+    width: 170px;
+    border: 2px solid var(--primary-color);
+    border-radius: 30px;
+    font-size: 16px;
+    color: var(--dark-color);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* modifica dell'input quando la ricerca è espansa */
+.search-swapper.expanded .search-box input[type="text"] {
+    width: 100%;
+    border-color: var(--secondary-color);
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
+    font-size: 18px;
+    padding: 12px 40px 12px 20px;
+}
+
+
+/* stile del pulsante di ricerca */
+.search-box button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* stile dell'icona di ricerca */
+.search-box img {
+    width: 22px;
+    height: 22px;
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+/* effetto hover sull'icona */
+.search-box button:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+/* per evidenziare la parola trovata */
+mark.highlighted-search-term {
+    background-color: skyblue;
+    padding: 0 3px;
+    border-radius: 3px;
+}

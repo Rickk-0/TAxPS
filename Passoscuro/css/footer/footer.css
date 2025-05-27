@@ -1,0 +1,54 @@
+/* PARTE DEL CODICE DEL PIE' DI PAGINA(FOOTER) */
+
+footer {
+    position: relative;
+    bottom: -100;
+    opacity: 0;
+    transform: translateY(50px);
+    background-color: var(--dark-color);
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 3rem 0;
+    text-align: center;
+    z-index: 100;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+/* classe per l'animazione */
+footer.show-footer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* per separare i buttoni */
+.socialButtons {
+    position: absolute;
+    margin-left: 820px;
+    margin-top: -37px;
+    display: flex;
+    gap: 10px;
+}
+
+/* modifica del pulsante per metterci instagram */
+.socialButtons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* dimensione dei pulsanti */
+.socialButtons img {
+    width: 24px;
+    height:24px;
+}
+
+/* si ingrandiscono i pulsanti al passaggio del mouse */
+.socialButtons button {
+    transition: transform 0.4s ease-in-out;
+}
+.socialButtons button:hover {
+    transform: scale(1.2);
+}

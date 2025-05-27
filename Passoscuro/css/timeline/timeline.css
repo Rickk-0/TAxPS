@@ -1,0 +1,88 @@
+/* contenitore principale della timeline */
+.timeline-section {
+    padding: 1rem 0.5rem;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* barra orizzontale della timeline */
+.timeline-bar {
+    margin-top: 1.5rem;
+    width: 90%;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), #ccc); /* cambio di colore, effetto di sfumatura */
+    border-radius: 3px;
+}
+
+/* contenitore per gli item della timeline */
+.timeline-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5rem;
+    position: relative;
+}
+
+/* stile per ciascun item della timeline */
+.timeline-item {
+    flex: 1 1 200px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 250px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* animazione della timeline */
+.timeline-animate {
+    animation-delay: 0.2s;
+}
+
+/* icona della timeline */
+.timeline-icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+/* titolo del'item della timeline */
+.timeline-item h4 {
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* testo descrittivo sotto il titolo */
+.timeline-item p {
+    font-size: 1rem;
+    text-align: center;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Animazione completa */
+.timeline-item.timeline-animate {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+/* animazione di fade-in */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}

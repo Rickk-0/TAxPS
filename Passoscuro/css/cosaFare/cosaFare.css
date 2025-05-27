@@ -1,0 +1,312 @@
+
+/* modifiche al titolo */
+
+.title-cosavedere {
+    position: relative;
+}
+
+.title-cosafare h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 2.6rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: -2rem;
+    position: relative;
+}
+
+/* modifiche alla frase sotto */
+.frase-cosafare p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 20px;
+    margin-top: -1.2rem;
+    margin-bottom: -40px;
+}
+/* sottolinea */
+.sottolinea-cosafare {
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+    text-underline-offset: 5px; /* spazio tra la frase e il sottolineato */ 
+    text-decoration-thickness: 3px;
+}
+
+.cosafare {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* CARD LIB(E)RI & BOX */
+
+.primaCard-cosafare {
+    position:relative;
+    width: 350px;
+    min-height: 490px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* effetto hover */
+.primaCard-cosafare:hover {
+    transform: scale(1.05);
+}
+
+/* modifiche all'immagine */
+.primaCard-cosafare img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+/* titolo statico visibile prima dell'hover */
+.title-libriEbox-cosafare {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    background-color: transparent;
+    transition: opacity 0.3s ease;
+}
+
+/* nasconde il tutolo statico al passaggio del mouse */
+.primaCard-cosafare:hover .title-libriEbox-cosafare {
+    opacity: 0;
+}
+
+/* modifiche al titolo */
+.title-libriEbox-cosafare h3 {
+    margin: 0;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* didascalia visibile al passaggio del mouse */
+.didascalia-libri {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+/* effetto visibilità al passaggio del mouse */
+.primaCard-cosafare:hover .didascalia-libri {
+    transform: translateY(0);
+}
+
+/* modifiche al titolo della didascalia */
+.didascalia-libri h3 {
+    margin-top: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* modificeh al paragrafo */
+.didascalia-libri p {
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/* CARD DELLE ESCURSIONI */
+
+.secondaCard-cosafare {
+    position:relative;
+    width: 350px;
+    min-height: 490px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* effetto hover */
+.secondaCard-cosafare:hover {
+    transform: scale(1.05);
+}
+
+/* modifiche all'immagine */
+.secondaCard-cosafare img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+/* titolo statico visibile prima dell'hover */
+.title-escursioni-cosafare {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    background-color: transparent;
+    transition: opacity 0.3s ease;
+}
+
+/* nasconde il tutolo statico al passaggio del mouse */
+.secondaCard-cosafare:hover .title-escursioni-cosafare {
+    opacity: 0;
+}
+
+/* modifiche al titolo */
+.title-escursioni-cosafare h3 {
+    margin: 0;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* didascalia visibile al passaggio del mouse */
+.didascalia-escursioni {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+/* effetto visibilità al passaggio del mouse */
+.secondaCard-cosafare:hover .didascalia-escursioni {
+    transform: translateY(0);
+}
+
+/* modifiche al titolo della didascalia */
+.didascalia-escursioni h3 {
+    margin-top: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* modificeh al paragrafo */
+.didascalia-escursioni p {
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/* CARD DELLA PESCA */
+
+.terzaCard-cosafare {
+    position:relative;
+    width: 350px;
+    min-height: 490px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* effetto hover */
+.terzaCard-cosafare:hover {
+    transform: scale(1.05);
+}
+
+/* modifiche all'immagine */
+.terzaCard-cosafare img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+/* titolo statico visibile prima dell'hover */
+.title-pesca-cosafare {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    background-color: transparent;
+    transition: opacity 0.3s ease;
+}
+
+/* nasconde il tutolo statico al passaggio del mouse */
+.terzaCard-cosafare:hover .title-pesca-cosafare {
+    opacity: 0;
+}
+
+/* modifiche al titolo */
+.title-pesca-cosafare h3 {
+    margin: 0;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* didascalia visibile al passaggio del mouse */
+.didascalia-pesca {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+/* effetto visibilità al passaggio del mouse */
+.terzaCard-cosafare:hover .didascalia-pesca {
+    transform: translateY(0);
+}
+
+/* modifiche al titolo della didascalia */
+.didascalia-pesca h3 {
+    margin-top: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* modificeh al paragrafo */
+.didascalia-pesca p {
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/* SEPARATORE */
+.divider-mappa {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.1) 100%);
+    height: 150px;
+    margin-top: -7rem;
+    margin-bottom: -1rem;
+}

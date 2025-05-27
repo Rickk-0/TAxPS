@@ -1,0 +1,31 @@
+/* SEZIONE DEL DOPOGUERRA */
+
+/* posizione del titolo */
+.title-dopoguerra-storia {
+    position: relative;
+}
+
+/* modifiche al titolo */
+.title-dopoguerra-storia h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 34px;
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+/* modifiche al paragrafo */
+.p-dopoguerra p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* sottolinea */
+.sottolinea-dopoguerra {
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+    text-underline-offset: 4px; /* spazio tra la frase e il sottolineato */ 
+    text-decoration-thickness: 2px; /* spessore */
+}
