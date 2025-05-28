@@ -67,7 +67,7 @@ img {
     align-items: center;
 }
 
-.navbar ul li a {
+/*.navbar ul li a {
     position: relative;
     text-decoration: none;
     color: var(--colore-scuro);
@@ -88,7 +88,7 @@ img {
     height: 3px;
     background-color: var(--colore-hover-base);
     transition: width 0.3s ease;
-}
+}*/
 
 .navbar ul li a:hover::after{
     width: 100%;
