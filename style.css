@@ -12,7 +12,7 @@
     --colore-hover-base: #3f51b5;
     --colore-chiaro: #f4f4f6;
     --colore-scuro: #111;
-    --colore-confronto: #ff6b6b; 
+    --colore-confronto: #ff9800; 
     
 
 }
@@ -122,6 +122,108 @@ img {
 .navbar ul li:last-child a::after {
     display: none; /* This removes the underline animation */
 }
+
+/*Gestione Social Dropdown*/
+
+.navbar ul li.social-item {
+    position: relative;
+}
+
+ .social-Dropdown {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            padding: 15px;
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            margin-top: 10px;
+        }
+
+        .social-Dropdown.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .social-Dropdown::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 8px solid white;
+        }
+
+        .social-Links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .social-Links a {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: var(--colore-scuro);
+        }
+
+        .social-Links a:hover {
+            background-color: #f8f9fa;
+            transform: translateX(5px);
+        }
+
+        .social-Links a::after {
+            display: none;
+        }
+
+        .social-Links a i {
+            font-size: 18px;
+            margin-right: 12px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .social-Links a.facebook i {
+            color: #1877f2;
+        }
+
+        .social-Links a.instagram i {
+            color: #e4405f;
+        }
+
+        .social-Links a.twitter i {
+            color: #1da1f2;
+        }
+
+
+        .social-Links a.facebook:hover {
+            color: #1877f2;
+            background-color: rgba(24, 119, 242, 0.1);
+        }
+
+        .social-Links a.instagram:hover {
+            color: #e4405f;
+            background-color: rgba(228, 64, 95, 0.1);
+        }
+
+        .social-Links a.twitter:hover {
+            color: #1da1f2;
+            background-color: rgba(29, 161, 242, 0.1);
+        }
 
 /* Hero Section */
 .hero {
@@ -375,7 +477,7 @@ img {
 }
 
 .btn-accent {
-    background: var(--colore-accent);
+    background: linear-gradient(to right, var(--colore-hover-base), var(--colore-confronto));
     color: #fff;
 }
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAxPS - Home page</title>
 
+    <link rel = "icon" href = "images/MyTowe.png" type = "image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="confronto-modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
@@ -32,8 +33,25 @@
                     <li>
                         <a href="#"> Scopri di più </a>
                     </li>
-                    <li>
-                        <a href="#"> Social </a>
+                    <!-- Dropdown dei Social -->
+                    <li class="social-item">
+                        <a href="#" id="socialToggle">Social</a>
+                        <div class="social-Dropdown" id="socialDropdown">
+                            <div class="social-Links">
+                                <a href="https://facebook.com" class="facebook" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                    Facebook
+                                </a>
+                                <a href="https://instagram.com" class="instagram" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                    Instagram
+                                </a>
+                                <a href="https://twitter.com" class="twitter" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                    Twitter
+                                </a>
+                            </div>
+                        </div>
                     </li>
                     <li>
                         <a class= "btn" href="#"> 
@@ -165,5 +183,6 @@
 
     <script src="javascript/main.js"></script>
     <script src="javascript/confronto-modal.js"></script>
+    <script src="javascript/social-dropdown.js"></script>
 </body>
 </html>
