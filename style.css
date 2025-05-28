@@ -102,26 +102,7 @@ img {
     margin-right: 10px;
 }
 
-.navbar ul li:last-child a {
-    margin-left: 10px;
-    border-radius: 50px;
-    padding: 10px 25px;
-    background-color: var(--colore-scuro);
-    color: white;
-    transition: all 0.3s ease;
-}
 
-.navbar ul li:last-child a:hover {
-    
-
-    background-color: var(--colore-hover-base);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(39, 159, 193, 0.3);
-}
-
-.navbar ul li:last-child a::after {
-    display: none; /* This removes the underline animation */
-}
 
 /*Gestione Social Dropdown*/
 
@@ -146,83 +127,177 @@ img {
             margin-top: 10px;
         }
 
-        .social-Dropdown.active {
+    .social-Dropdown.active {
+       opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .social-Dropdown::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid white;
+    }
+
+    .social-Links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .social-Links a {
+        display: flex;
+        align-items: center;
+        padding: 12px 15px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        color: var(--colore-scuro);
+    }
+
+    .social-Links a:hover {
+         background-color: #f8f9fa;
+        transform: translateX(5px);
+        }
+
+    .social-Links a::after {
+        display: none;
+        }
+
+    .social-Links a i {
+       font-size: 18px;
+        margin-right: 12px;
+        width: 20px;
+        text-align: center;
+    }
+
+    .social-Links a.facebook i {
+            color: #1877f2;
+    }
+
+    .social-Links a.instagram i {
+            color: #e4405f;
+    }
+
+    .social-Links a.twitter i {
+            color: #0e0f0f;
+    }
+
+
+    .social-Links a.facebook:hover {
+            color: #1877f2;
+            background-color: rgba(24, 119, 242, 0.1);
+    }
+
+    .social-Links a.instagram:hover {
+            color: #e4405f;
+            background-color: rgba(228, 64, 95, 0.1);
+    }
+
+    .social-Links a.twitter:hover {
+         color: #0e0f0f;
+        background-color: rgba(29, 161, 242, 0.1);
+    }
+
+    /*Modal "Scopri di Più"*/
+     .scopri-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .scopri-modal-overlay.active {
             opacity: 1;
             visibility: visible;
-            transform: translateX(-50%) translateY(0);
         }
 
-        .social-Dropdown::before {
-            content: '';
+        .scopri-modal {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transform: scale(0.8) translateY(50px);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .scopri-modal-overlay.active .scopri-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .scopri-modal-close {
             position: absolute;
-            top: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 0;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-            border-bottom: 8px solid white;
-        }
-
-        .social-Links {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .social-Links a {
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #999;
+            transition: color 0.3s ease;
+            width: 30px;
+            height: 30px;
             display: flex;
             align-items: center;
-            padding: 12px 15px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-weight: 500;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .scopri-modal-close:hover {
+            color: var(--colore-hover-base);
+            background-color: rgba(63, 81, 181, 0.1);
+        }
+
+        .scopri-modal h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
             color: var(--colore-scuro);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
         }
 
-        .social-Links a:hover {
-            background-color: #f8f9fa;
-            transform: translateX(5px);
+        .scopri-modal p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
         }
 
-        .social-Links a::after {
-            display: none;
+        .scopri-modal .highlight {
+            color: var(--colore-hover-base);
+            font-weight: 600;
         }
 
-        .social-Links a i {
-            font-size: 18px;
-            margin-right: 12px;
-            width: 20px;
+        .scopri-modal-footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
             text-align: center;
         }
 
-        .social-Links a.facebook i {
-            color: #1877f2;
-        }
-
-        .social-Links a.instagram i {
-            color: #e4405f;
-        }
-
-        .social-Links a.twitter i {
-            color: #1da1f2;
-        }
-
-
-        .social-Links a.facebook:hover {
-            color: #1877f2;
-            background-color: rgba(24, 119, 242, 0.1);
-        }
-
-        .social-Links a.instagram:hover {
-            color: #e4405f;
-            background-color: rgba(228, 64, 95, 0.1);
-        }
-
-        .social-Links a.twitter:hover {
-            color: #1da1f2;
-            background-color: rgba(29, 161, 242, 0.1);
+        .scopri-modal-footer p {
+            font-size: 0.9rem;
+            color: #888;
+            margin: 0;
         }
 
 /* Hero Section */
@@ -307,12 +382,12 @@ img {
     margin-bottom: 20px;
 }
 
-/* Hero Buttons - MIGLIORAMENTO DIMENSIONI E VISIBILITÀ */
+/* Hero Buttons  */
 .hero-buttons {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 40px; /* Aumentato ulteriormente lo spazio tra i pulsanti */
+    gap: 40px; 
     margin-top: 60px;
     width: 100%;
 }
@@ -320,8 +395,8 @@ img {
 .image-button {
     position: relative;
     flex: 0 0 auto;
-    width: 350px; /* Aumentato da 300px */
-    height: 250px; /* Aumentato da 200px */
+    width: 350px; 
+    height: 250px; 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -332,7 +407,7 @@ img {
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* Testo dei pulsanti - MIGLIORAMENTO VISIBILITÀ */
+/* Testo dei pulsanti */
 .image-button span {
     position: relative;
     z-index: 10;
@@ -488,7 +563,7 @@ img {
 
 /* Text Classes */
 .text-xxl{
-    font-size: 4rem; /* Aumentato da 3rem */
+    font-size: 4rem; 
     line-height: 1.1;
     font-weight: 800;
     margin: 40px 0 20px;

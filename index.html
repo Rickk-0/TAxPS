@@ -31,7 +31,7 @@
                         <a href="index.html"> Home </a>
                     </li>
                     <li>
-                        <a href="#"> Scopri di più </a>
+                        <a href="#" id="scopriToggle"> Scopri di più </a>
                     </li>
                     <!-- Dropdown dei Social -->
                     <li class="social-item">
@@ -47,17 +47,13 @@
                                     Instagram
                                 </a>
                                 <a href="https://twitter.com" class="twitter" target="_blank">
-                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-x-twitter"></i>
                                     Twitter
                                 </a>
                             </div>
                         </div>
                     </li>
-                    <li>
-                        <a class= "btn" href="#"> 
-                            <i class="fas fa-user"></i> Log in
-                        </a>
-                    </li> 
+                    
                 </ul>
             </div>
         </div>
@@ -84,6 +80,20 @@
             </div>
         </div>
     </section>
+
+    <!-- Scopri di Più -->
+    <div class="scopri-modal-overlay" id="scopriModalOverlay">
+        <div class="scopri-modal">
+            <button class="scopri-modal-close" id="scopriModalClose">&times;</button>
+            <h2>Chi Siamo</h2>
+            <p>Benvenuto! Questo sito web è stato creato per <span class="highlight">scopi didattici</span> da due studenti come "progetto finale" di informatica.</p>
+            <p>Il progetto rappresenta un'opportunità per mettere in pratica le competenze acquisite in <span class="highlight">HTML, CSS e JavaScript</span>, esplorando varie tecniche di design e di interazione con l'utente.</p>
+            <p>Attraverso questo lavoro stiamo approfondendo concetti come l'accessibilità web e l'esperienza utente, fondamentali per lo sviluppo di applicazioni web moderne.</p>
+            <div class="scopri-modal-footer">
+                <p>Grazie per aver visitato il nostro progetto! </p>
+            </div>
+        </div>
+    </div>
     
 
     <!-- Sezione Introduttiva -->
@@ -95,19 +105,6 @@
             
             
             <div class="intro-cards">
-                
-                <!--<div class="flip-card">
-                    <div class="flip-card-inner">
-                         <div class="flip-card-front">
-                            <img src="images/passoscuro.jpeg"/>
-                        </div>
-                    <div class="flip-card-back">
-                        <div class="glass-effect">
-                            <p>holder</p>
-                        </div>
-                        <img src="images/passoscuro.jpeg"/>
-                    </div>
-                </div>-->
 
                 <div class="intro-card">
                     <img src="/images/TorreAngela.png" alt="Torre Angela">
@@ -144,9 +141,6 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <a href="index.html">
-                        <img src="images/Pera2.png" alt="logo">
-                    </a>
                     <div class="card">
                         <h4>Resta aggiornato</h4>
                         <p>Iscriviti alla nostra newsletter per ricevere aggiornamenti su eventi e novità di Torre Angela e Passoscuro</p>
@@ -184,5 +178,6 @@
     <script src="javascript/main.js"></script>
     <script src="javascript/confronto-modal.js"></script>
     <script src="javascript/social-dropdown.js"></script>
+    <script src="javascript/scopri-modal.js"></script>
 </body>
 </html>
