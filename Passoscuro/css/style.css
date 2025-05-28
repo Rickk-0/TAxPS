@@ -23,7 +23,8 @@ main {
     --dark-color: #333;
     --accent-color: #4CAF50;
     --transition: all 0.3s ease;
-    --header--height: 80px;
+    --header-height: 80px;
+    
 }
 
 /* Colore dello sfondo */

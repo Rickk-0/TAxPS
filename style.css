@@ -9,10 +9,12 @@
 }
 
 :root {
-    --colore-hover-base: rgb(39, 159, 193);
+    --colore-hover-base: #3f51b5;
     --colore-chiaro: #f4f4f6;
     --colore-scuro: #111;
-    --colore-accent: #ff6b6b; /* Nuovo colore accent */
+    --colore-confronto: #ff6b6b; 
+    
+
 }
 
 body {
@@ -110,9 +112,15 @@ img {
 }
 
 .navbar ul li:last-child a:hover {
+    
+
     background-color: var(--colore-hover-base);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(39, 159, 193, 0.3);
+}
+
+.navbar ul li:last-child a::after {
+    display: none; /* This removes the underline animation */
 }
 
 /* Hero Section */
