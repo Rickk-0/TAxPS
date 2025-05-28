@@ -1,0 +1,135 @@
+/* PARTE DI CODICE DEL MENU */
+
+/* per far sì che appena clicco sul link 'Storia' scrolli fino alla sezione storia */
+html {
+    scroll-behavior: smooth;
+}
+
+/* menù barra decorativa sotto la barra decoratica del titolo */
+.menu-bar {
+    background-color: white;
+    border-top: 2px solid #ccc;
+    width: 20%;
+}
+
+/* stile dei link del menù */
+.headerHome li a {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 0px 25px;
+    text-decoration: none; /* toglie l'effetto del link */
+    color: black;
+    transition: var(--transition);
+}
+
+.headerHome li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: 15px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.headerHome li a:hover::after {
+    width: 100%;
+}
+
+.logo {
+    flex-shrink: 0; /* impedisce al logo di ridursi */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin-left: 50px;
+}
+
+/* per affiancare i link uno accanto all'altra */
+.headerHome {
+    display: flex;
+    gap: 2rem; /* mette spazio tra i link */
+    flex-wrap: wrap;
+    list-style: none; /* toglie i puntini neri */
+    margin: 0;
+    padding: 0; /* permette di non toccare i bordi */
+    flex-grow: 1; /* fa espandere il menu per occupare lo spazio rimanente */
+    justify-content: flex-start; /* allinea a sinistra i link */
+}
+.menu-search {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* per spostare il menù in basso */
+.headerHome {
+    position: relative; /* per regolare la distanza dall'alto */
+    left: 0; /* quanto va ad allineare il menù a sinistra */
+}
+
+/* per spostare il menù da destra */
+.headerNav ul {
+    display: flex; /* allinea gli elementi in riga */
+    align-items: center;
+    justify-content: center; /* centra orizzontalmente i link del menù */
+    gap: 2rem; 
+    list-style: none; 
+    margin: 0;
+    padding: 0; /* aggiuge spaziatura interna di 16 pixel */
+    height: 100%;
+}
+
+/* per cambiare colore del link quando ci si passa sopra con il link */
+.headerHome li a:hover {
+    color: blue;
+}
+
+/* per aggiungere la linea orizzontale sotto, appena si passa sopra il link */
+.headerNav a::after {
+    content: ''; /* */
+    position: absolute; /* per posizionare la linea rispetto al link */
+    width: 0; /* la linea parte da invisibile */
+    height: 2px; /* altezza della linea */
+    bottom: -4px; /* per posizionarla sotto il link(parola) */
+    left: 0; /* per allinearla, farla partire da destra */ 
+    background-color: var(--primary-color); 
+    transition: width 0.3s ease;
+}
+
+/* per espandere la linea al passaggio del mouse */
+/* :hover rileva il passaggio del mouse sopra il link */
+.headerNav a:hover::after {
+    width: 100%; /* fa crescere la linea fino alla larghezza del link(parola)*/
+}
+
+/* colore hover del testo */
+.headerNav a:hover {
+    color: var(--primary-color);
+}
+
+/* box del menù */
+.headerNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    background-color: white;
+    height: 100px;
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}

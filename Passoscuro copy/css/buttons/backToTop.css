@@ -1,0 +1,41 @@
+/* PARTE DI CODICE PER L'IMPLEMENTAZIONE DEL PULSANTE BACK-TO-TOP */
+
+.back-to-top {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    background-color: var(--primary-color);
+    color:white;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 8px 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3 ease, transform 0.3 ease;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* al passaggio del muouse cambia colore */
+.back-to-top:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.15);
+}
+
+/* renderlo visibile quando si scrolla sul sito */
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    animation: slideUp 0.5s ease-out;
+}
+/* effetto slideUp */
+@keyframes slideUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
