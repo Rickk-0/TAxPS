@@ -291,6 +291,7 @@
 .img-hover-effetto:hover img {
     opacity: 1; /* per rimuovere la trasparenza */
     transform: scale(1.05);
+    cursor: default;
 }
 /*...e il testo scompare gradualmente */
 .img-hover-effetto:hover .img-hover-testo {

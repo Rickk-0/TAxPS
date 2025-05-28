@@ -117,7 +117,7 @@
     margin-bottom: 0;
 }
 
-/* la linea sotto al titolo "le origini e l'inizio di passoscuro" */
+/* la linea sotto al titolo  */
 .orgini-inizionovecento-bar {
     margin-top: 1rem; 
     margin-bottom: 1rem;
@@ -158,8 +158,8 @@
 }
 
 /* modifiche all'immagine con l'effetto */
-.img-tucul img {
-    max-width: 600px;
+.img-torreAngela img {
+    max-width: 400px;
     height: auto;
     border-radius: 10px;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -167,7 +167,7 @@
 }
 
 /* effetto zoom al passaggio */
-.img-tucul img:hover {
+.img-torreAngela img:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -291,6 +291,7 @@
 .img-hover-effetto:hover img {
     opacity: 1; /* per rimuovere la trasparenza */
     transform: scale(1.05);
+    cursor: default; 
 }
 /*...e il testo scompare gradualmente */
 .img-hover-effetto:hover .img-hover-testo {
