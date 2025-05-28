@@ -1,1 +1,547 @@
-torre angela
+<!DOCTYPE html> <!-- specifica la versione di HTML della pagina -->
+<html lang = "it"> <!-- contiene tutti gli altri elementi -->
+
+    <head> <!-- contiene metadati, titolo della pagina, e collegamenti a fogli di stile o javascript -->
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta name = "description" content = "Scopri Passoscuro, località balneare sul litorale romano.">
+        <title>TAxPS - Torre Anglela</title> <!-- <title> per impostare il titolo della pagina -->
+        <link rel="stylesheet" href="../style.css">
+        <link rel = "icon" href = "assets/MyTowe.png" type = "image/x-icon"> <!-- link per mettere il favicon accanto al nome del sito-->
+        <script type = "module" src = "https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    </head>
+
+    <body> <!-- contiene il contenuto principale visibile della pagina web -->
+        
+        <header> <!-- utilizzato per definire l'intestazione di una pagina o di una sezione -->
+
+
+
+            <nav class="navbar">
+                <div class="container">
+                    
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/MyTowe.png" alt="logo">
+                        </a>
+                    </div>
+
+                    <div class="main-menu">
+                        <ul>
+                            <li>
+                                <a href="..\"> Home </a>
+                            </li>
+                            <li>
+                                <a href="#Storia">Storia </a>
+                            </li>
+                            <li>
+                                <a href="#CosaVedere"> Cosa vedere </a>
+                            </li>
+                            <li>
+                                <a href="#CosaFare"> Cosa fare </a>
+                            </li>
+                            <li>
+                                <a href="#Mappa"> Mappa </a>
+                            </li>
+                            <li class = "menu-search">
+                                <div class = "search-swapper">
+                                        <div class = "search-box">
+                                            <input type = "text" id = "searchInput" placeholder = "Cerca..." name = "ricercarichiesta">
+                                            <button type = "button" onclick = "searchInPage()">
+                                                <img src = "assets/magnifying-glass copia.png" alt = "search">
+                                            </button>
+
+                                            <!-- Messaggio di errore o info nella barra -->
+                                            <div id="searchMessage" style="
+                                                position: absolute;
+                                                left: 15px;
+                                                bottom: -22px;
+                                                font-size: 15px;
+                                                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                                color: red;
+                                                white-space: nowrap;
+                                                user-select: none;
+                                            "></div>
+
+                                        </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class = "header-content">
+                    <h2>Benvenuti a Passoscuro</h2>
+                    <div class = "title-separatore"> </div>
+                    <p>Località balneare sul litorale romano</p>
+            </div>
+
+            <div class = "container">
+                
+            </div>
+        </header>
+
+
+        <main>
+            
+            <section id = "intro">
+                <div class = "main-intro-content">
+                    <h2>Passoscuro, la spiaggia del comune di Fiumicino</h2>
+                    <p>Passoscuro è una località balneare del comune di Fiumicino, situata lungo la costa laziale a nord-ovest di Roma. Il nome, conosciuto anche nella variante <b>"Passo Oscuro"</b> deriva da un antico passaggio costiero utilizzato dai cacciatori, citato in un documento di papa Benedetto XIII risalente al 1724.<br>
+                    Sebbene la zona fosse abitata sin dall'epoca romana, il nucleo urbano attuale si è sviluppato nel corso del <b>Novecento</b>,<br>
+                    a ridosso di un ampio tratto di spiaggia sabbiosa tipico di questo litorale.
+                    </p>
+                </div>
+            </section> 
+
+            <section class = "timeline-section">
+                <div class = "timeline-container">
+
+                    <!-- Primo elemento della timeline -->
+                    <div class = "timeline-item">
+                        <div class = "timeline-icon">
+                            <img src="assets/paper.png" alt="" class="emoji-icon">
+                        </div>
+                        <h4>1724</h4>
+                        <p>Prima menzione di "Passo Oscuro" in un documento papale</p>
+                    </div> 
+
+                    <!-- Secondo elemento della timeline -->
+                    <div class = "timeline-item">
+                        <div class = "timeline-icon">
+                            <img src="assets/bomb.png" alt="" class="emoji-icon">
+                        </div>
+                        <h4>1944</h4>
+                        <p>Passoscuro durante la Seconda Guerra Mondiale</p>
+                    </div>
+
+                    <!-- Terzo elemento della timeline -->
+                    <div class = "timeline-item">
+                        <div class = "timeline-icon">
+                            <img src="assets/beach-umbrella.png" alt="" class="emoji-icon"> 
+                        </div>
+                        <h4>Anni '60</h4>
+                        <p>Sviluppo urbano e turismo balneare</p>
+                    </div>
+
+                    <style>
+                        .emoji-icon {
+                         width: 60px;
+                        height: 60px;
+                    }
+                    </style>
+
+                </div>
+
+                <div class = "timeline-bar"></div>
+            </section>
+
+            <!-- separatore -->
+            <div class = "divider-image"></div> 
+
+            <!-- INIZIO STORIA -->
+            <section id = "Storia">
+                <div class = "titolo-storia-content">
+                    <h1 class = "storia-slide-in">Passoscuro nel tempo</h1>
+                </div>
+                <div class = "storia-bar"></div>
+            </section>
+
+            <!-- box di storia -->
+            <section id = "storia">
+
+                <!-- header con la barra blu -->
+                <div class = "main-storia-content">
+                    <div class = "header-storia">
+                        <h2>Un viaggio nel tempo a Passoscuro</h2>
+                        <p>Una storia fatta di sabbia, mare e trasformazioni</p>
+                    </div>
+
+                    <!-- le origini e l'inizio del Novecento -->
+                    <!-- titolo -->
+                    <div class = "title-box-storia">
+                        <h3><span style = "color: #3f51b5">•</span> Le origini e l'inizio del Novecento</h3>
+                        <div class = "orgini-inizionovecento-bar"></div>
+                    </div>
+
+                    <div class = "text-storia">
+                        <div class = "p-img">
+                            <!-- paragrafo -->
+                            <div class = "p-storia">
+                                <p>
+                                    Passoscuro iniziò a svilupparsi come piccolo insediamento costiero nei primi decenni del Novecento. 
+                                    Negli anni '20, la zona era frequentata da pescatori provenienti da altre parti del Lazio.
+                                    Questi ponieri costruirono le prime abitazioni rudimentali, spesso capanne di fortuna realizzate con materiali naturali come legno, argilla, frasche e canne palustri. 
+                                    Tali strutture, simili a capanne africane, erano chiamate <strong>Tucul</strong>.
+
+                                    L'ambiente era spartano: le famiglie vivevano di pesca, caccia e raccolta nel vicino bosco.
+                                    L'insediamento isolato e senza infrastrutture, si sviluppava senza piani regolatori, in una cornice naturale fatta di dune,
+                                    macchia mediterranea e paludi. La mancanza di servizi non impedì tuttavia la crescita lenta ma costante della comunità.
+                                </p>
+                            </div>
+                            <!-- immagine -->
+                            <div class = "img-tucul">
+                                <img src = "assets/tucul.jpg" alt = "tucul">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Passoscuro durante la seconda guerra mondiale -->
+                    <!-- titolo -->
+                    <div class = "title-secondwarworld-storia">
+                        <h3><span style = "color: #3f51b5">•</span> Passoscuro durante la seconda guerra mondiale</h3>
+                        <div class = "durantesecondaguerra-bar"></div>
+                    </div>
+
+                    <div class = "secondwarworld-storia">
+                        <div class = "p-img-secondwarwordl">
+
+                            <!-- paragrafo -->
+                            <div class = "p-secondwarworld">
+                                <p>
+                                    Durante la seconda guerra mondiale, Passoscuro era ancora un piccolo borgo, composto da famiglie di
+                                    pescatori che vivevano in condizioni molto semplici e precarie. Il suo isolamento con un'unica via
+                                    d'accesso dalla via Aurelia attraverso S. Carlo a Palidoro lo rendeva difficilmente raggiungibile e
+                                    scarsamente considerato da un punto di vista strategico, ma non per questo immune agli effetti del conflitto.
+
+                                    E' però nelle immediate vicinanze di Passoscuro che si verificò un episodio di straordinario valore civile e umano.<br>
+                                    Il 23 Settembre 1943, presso la <strong>Torre di Palidoro</strong>, il vicebrigadiere dei Carabinieri <strong>Salvo D'Acquisto</strong>
+                                    si sacrificò volontariamente per salvare ventidue civili condannati alla fucilazione da parte delle truppe tedesche
+                                    in rappresaglia a un'esplosione accidentale. Il gesto eroico gli valse la <em><strong>Medaglia d'Oro al Valor Militare</strong></em>
+                                    e segnò per sempre la memoria storica del luogo.
+                                </p>
+                            </div>
+
+                            <!-- immagini -->
+                            <!-- immagine Salvo D'Acquisto -->
+                            <div class="img-salvodacquisto">
+                                <div class="img-hover-effetto">
+                                    <img src="assets/salvoD'Acquisto.avif" alt="salvodacquisto">
+                                    <div class="img-hover-testo">Salvo D'Acquisto</div>
+                                </div>
+                            </div>
+                            <!-- immagine Torre di Palidoro -->
+                            <div class="img-torredipalidoro">
+                                <div class="img-hover-effetto">
+                                    <img src="assets/torreDiPalidoro.jpg" alt="torredipalidoro">
+                                   <div class="img-hover-testo">Torre di Palidoro</div>
+                                </div>
+                            </div>  
+
+                        </div>
+                    </div>
+
+                    <!-- separatore -->
+                    <div class = "divider-torre"></div>
+
+                    <!-- sezione della torre di palidoro -->
+                    <div class = "torredipalidoro-storia">
+
+                        <!-- titolo -->
+                        <div class = "title-torredipalidoro-storia hidden">
+                            <h2>La Torre di Palidoro</h2>
+                            <div class = "torredipalidoro-bar"></div>
+                        </div>
+
+                        <div class = "torredipalidoro-storia">
+                            <div class = "p-3d-torredipalidoro hidden">
+
+                                <!-- paragrafo -->
+                                <div class = "p-torredipalidoro">
+                                    <p>
+                                        La <strong>Torre di Palidoro</strong>, a breve distanza da Passoscuro, è uno dei monumenti più rappresentativi del litorale romano.
+                                        Fu costruita originariamente tra l'VIII e il IX secolo come torre di avvistamento per difendere la costa delle escursioni
+                                        dei pirati saraceni.<br>La sua posizione dominante permetteva la sorveglianza dell'intera fascia costiera fino a Civitavecchia.<br>
+
+                                        Nel corso del XVI secolo fu restaurata e potenziata dall'<em><strong>Arcispedale di Santo Spirito</strong></em> in Sassia, che amministrava vasti territori 
+                                        nell'Agro Romano.<br>Con l'avvento dell'epoca moderna, la torre perse progressivamente la sua funzione difensiva, ma rimase un simbolo importante
+                                        per la zona e venne mantenuta in buono stato.
+
+                                        Oggi, la Torre di Palidoro è un luogo di memoria, sia per il suo valore storico che per il sacrificio di Salvo D'Acquisto.<br>
+                                        <span class = "sottolinea">E' visitabile e rappresenta una delle mete culturali più significative della zona di Fiumicino e del litorale nord romano</span>.
+                                    </p>
+                                </div>
+
+                                <!-- modello 3d -->
+                                <div class = "torre-modello-3d-torredipalidoro">
+                                    <model-viewer
+                                        src = "assets/TorreDiPalidoro.glb"
+                                        alt = "modello 3d torre di palidoro"
+                                        auto-rotate
+                                        camera-controls
+                                        ar>
+                                    </model-viewer>
+
+                                </div>
+                                   
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- separatore -->
+                    <div class = "divider-dopoguerra"></div>
+
+                    <!-- sezione del dopoguerra di passoscuro -->
+                    <div class = "dopoguerra-storia">
+
+                        <!-- titolo -->
+                        <div class = "title-dopoguerra-storia">
+                            <h2>Passoscuro nel dopoguerra</h2>
+                            <div class = "dopoguerra-bar"></div>
+                        </div>
+
+                        <div class = "passocuro-neldopoguerra">
+                            <div class = "p-passocuro-neldopoguerra">
+
+                                <!-- paragrafo -->
+                                <div class = "p-dopoguerra">
+                                    <p>
+                                        Nel secondo dopoguerra, <span class = "sottolinea-dopoguerra">Passoscuro cominciò ad assumere un volto più urbanizzato</span>.<br>
+                                        Dopo la bonifica delle paludi e la costruzione delle prima infrastrutture, molte famiglie si stabilirono nella zona,
+                                        spesso occupando terreni in maniera informale. Le abitazioni venivano costruite senza licenze, e l'edilizia
+                                        seguiva uno schema spontaneo e caotico. Questo fenomeno fu comune a molte località del litorale laziale.<br>
+
+                                        Negli anni '50 e '60, Passoscuro era ormai popolata da oltre 200 famiglie. Tuttavia, molte delle sue costruzioni
+                                        erano ancora baracche o piccole case di fortuna. Lo sviluppo avvenne in modo disordinato, ma fu proprio questo carattere "organico"
+                                        che contribuì a dare al borgo un'identità unica.
+
+                                        Con il passare degli anni, vennero introdotti <strong>condoni edilizi</strong>, che permisero la regolarizzazione di molte costruzioni abusive.<br>
+                                        Nonostante le difficoltà, Passoscuro continuò a crescere, attirando anche turisti per la sua spiaggia ampia e sabbiosa.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div> 
+
+                </div>
+            </section>
+
+            <!-- separatore -->
+            <div class = "divider-cosavedere"></div>
+
+            <!-- INIZIO COSA VEDERE -->
+            <section id = "CosaVedere">
+
+                <!-- titolo -->
+                <div class = "title-cosavedere">
+                    <h1>Cosa vedere a Passoscuro...</h1>
+                </div> 
+                <!-- mini paragrafo sotto al titolo -->
+                <div class = "frase-sotto-altitolo">
+                    <p><span class = "sottolinea-posti">Scopri i luoghi più affascinanti e simbolici di Passoscuro, tra natura, storia e tradizione!</span></p>
+                </div>
+
+            </section>
+
+            <section class = "cosavedere">
+
+                <!-- PRIMA CARD -->
+                <div class = "primaCard-cosavedere card-hidden">       
+                    <img src = "assets/salvooo.jpg" alt = "Statua">
+     
+                    <!-- titolo -->
+                    <div class = "title-statua-cosavedere">
+                        <h3>Statua di Salvo D'Acquisto</h3>
+                    </div>
+    
+                    <div class = "didascalia-statua">
+                        <h3>Statua di Salvo D'Acquisto</h3>
+                        <p>
+                            La statua di Salvo D'Acquisto a Passoscuro, è un monumento dedicato al vice brigadiere dei Carabinieri che,
+                            il 23 Settembre 1943 sacrificò la sua vita  per salvare quella di ventidue civili innocenti.<br><br>
+
+                            <strong>Dove si trova?</strong><br>
+
+                            Il monumento si trova in Piazza Salvo D'Acquisto, cuore del borgo marinaro. Essa è stata inaugurata ufficialmente
+                            il 23 Settembre 2005, in occasione del 62° anniversario della morte del vice brigadiere.
+                        </p>
+                    </div>
+                </div>
+    
+                <!-- SECONDA CARD -->
+                <div class = "secondaCard-cosavedere card-hidden">
+                    <img src = "assets/MuralesPassoscuro2.jpg" alt = "Murales">
+    
+                    <!-- titolo -->
+                    <div class = "title-murales-cosavedere">
+                        <h3>L'Isola delle Correnti</h3>
+                    </div>
+    
+                    <div class = "didascalia-murales">
+                        <h3>L'Isola delle Correnti</h3>
+                        <p>
+                            Passocuro è diventato negli ultimi anni un <strong>laboratorio creativo a cielo aperto</strong> grazie al progetto artistico
+                            e sociale chiamato "L'Isola delle Correnti".<br>
+    
+                            Questo movimento nasce dal basso, e ha l'obiettivo di <em>valorizzare il territorio 
+                            attraverso l'arte, la partecipazione e l'autogestione</em>. Muri, pareti di edifici, cabine elettriche e recinzioni 
+                            sono stati trasformati in murales colorati e opere d'arte urbana, realizzati da artisti locali e internazionali.<br><br>
+    
+                            <strong>Cosa raccontano?</strong><br>
+                            Le opere raccontano la storia, i sogni e le battaglie ambientali del borgo. 
+                            Affrontano tematiche come l'identità locale, il mare e la memoria storica.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- TERZA CARD -->
+                <div class = "terzaCard-cosavedere card-hidden">
+                    <img src = "assets/duneDiPassoscuro.jpg" alt = "Macchia di Palidoro">
+
+                    <!-- titolo -->
+                    <div class = "title-macchiaPalidoro-cosavedere">
+                        <h3>Macchia di Palidoro</h3>
+                    </div>
+
+                    <div class = "didascalia-macchiaDiPalidoro">
+                        <h3>Macchia di Palidoro</h3>
+                        <p>
+                            A pochi passi dal mare si estende la Macchia di Palidoro, una riserva naturale protetta che conserva un 
+                            raro esempio di macchia mediterranea costiera.<br><br>
+
+                            <strong>Cosa è possibile trovare?</strong><br>
+                            In questa oasi verde si trovano:<br>
+                            •<strong>Specie vegetali rare</strong> come il giglio di mare, il finocchio marino e l'eringio<br>
+                            •<strong>Avifauna protetta</strong>, tra cui uccelli migratori, rapaci e piccoli mammiferi<br>
+                            •<strong>Dune fossili e paesaggi costieri intatti</strong>, che rappresentano un ecosistema ormai raro nel litorale laziale.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- INIZIO COSA FARE -->
+            <section id = "CosaFare">
+
+                <!-- titolo -->
+                <div class = "title-cosafare">
+                    <h1>...e cosa fare a Passoscuro</h1>
+                </div>
+                <!-- paragrafo -->
+                <div class = "frase-cosafare">
+                    <p><span class = "sottolinea-cosafare">Non solo spiagge: Passoscuro offre esperienze per ogni curiosità</span></p>
+                </div>
+
+            </section>
+
+            <section class = "cosafare">
+
+                <!-- PRIMA CARD -->
+                <div class = "primaCard-cosafare">
+                    <img src = "assets/lib(e)ri&boxPassoscuro.jpg" alt = "Lib(e)ri & Box">
+
+                    <!-- titolo -->
+                    <div class = "title-libriEbox-cosafare">
+                        <h3>Lib(e)ri & Box</h3>
+                    </div>
+
+                    <div class = "didascalia-libri">
+                        <h3>Lib(e)ri & Box</h3>
+                        <p>
+                            Nel cuore di Passoscuro si trovano iniziative culturali uniche come "Lib(e)ri & Box".<br><br>
+                            Si tratta di:<br>
+                            • Scatole e piccole librerie installate per strada dove chiunque può prendere o lasciare un libro<br>
+                            • Spazi culturali diffusi, senza barriere: letture pubbliche, presentazioni di libri, incontri artistici si tengono in piazza
+                            o lungo il lungomare
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- SECONDA CARD -->
+                <div class = "secondaCard-cosafare">
+                    <img src = "assets/escursioniPassoscuro.jpg" alt = "Escursioni">
+
+                    <!-- titolo -->
+                    <div class = "title-escursioni-cosafare">
+                        <h3>Escursioni nella natura</h3>
+                    </div>
+
+                    <div class = "didascalia-escursioni">
+                        <h3>Escursioni nella natura</h3>
+                        <p>
+                            • Sentieri nella macchia meditteranea e lungo le dune<br>
+                            • Birdwatching nelle zone protette<br>
+                            • Passeggiate educative per scoprire le piante e la fauna locale<br>
+                            • Eventi stagionali come "Passeggiate tra le dune", con guide ambientali                       
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- TERZA CARD -->
+                <div class = "terzaCard-cosafare">
+                    <img src = "assets/pescaPassoscuro.jpeg" alt = "Pesca">
+
+                    <!-- titolo -->
+                    <div class = "title-pesca-cosafare">
+                        <h3>Pesca</h3>
+                    </div>
+
+                    <div class = "didascalia-pesca">
+                        <h3>Pesca</h3>
+                        <p>
+                            Storicamente borgo di pescatori, ancora oggi è possibile:<br>
+                            • praticare pesca sportiva dalla riva o con piccole imbarcazioni<br>
+                            • acquistare pesce fresco dai pescatori locali<br>
+                            • partecipare a eventi legati alla tradizione marinaresca
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- separatore -->
+            <div class = "divider-mappa"></div>
+
+
+            <!-- IMPLEMENTAZIONE DELLE MAPPA -->
+            <section id = "Mappa">
+
+                <div class = "mappa-wrapper hidden">
+                    <!-- titolo -->
+                    <div class = "title-mappa">
+                        <h1>Mappa interattiva</h1>
+                    </div>
+
+                    <div class = "mappa-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11878.014914056588!2d12.149257109869732!3d41.90352886021939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1325f8aaa88d9a05%3A0xfb4c78f805d3c3e2!2sPassoscuro%20RM!5e0!3m2!1sit!2sit!4v1748219019134!5m2!1sit!2sit" 
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+            </section> 
+
+        </main>
+
+        <footer>
+            <div class = "containerButton">
+                <p>© 2025 Quartiere di Roma: Passoscuro</p>
+                <p>TAxPS</p>
+                <p>Seguiteci anche su: </p>
+
+                <div class = "socialButtons">
+                    <button type = "button">
+                        <img src = "assets/instagram.png" alt = "Instagram">
+                    </button>
+                    <button type = "button">
+                        <img src = "assets/facebook.png" alt = "Facebook">
+                    </button>
+                </div>
+            </div>
+        </footer>
+
+        <a href = "#" class = "back-to-top" id = "back-to-top" title = "Torna su">↑</a>
+        <script src = "JavaScript/script.js"></script>
+
+    </body>
+
+</html>
+

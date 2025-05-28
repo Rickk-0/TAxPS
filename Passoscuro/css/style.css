@@ -17,14 +17,14 @@ main {
 /* PALETTE DEI COLORI */
 /* varibili di colore e di transizione riutulizzabili */
 :root {
-    --primary-color: #3f51b5;
-    --secondary-color: #ff9800;
+    --primary-color: #4c8cd9;
+    --secondary-color: #3f51b5;
     --light-color: #f5f5f5;
     --dark-color: #333;
     --accent-color: #4CAF50;
     --transition: all 0.3s ease;
     --header-height: 80px;
-}
+}#ff9800
 
 /* Colore dello sfondo */
 body {
