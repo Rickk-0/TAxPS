@@ -19,7 +19,6 @@ header {
 /* stile dell'intestazione principale con gradiente */
 .header-content {
     min-height: 300px;
-    background: linear-gradient(to right, var(--));
     background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); /* contrasto di colori nella barra */
     color: white; /* colore della scritta del titolo */
     padding: 3rem 0; /* dimensione della barra decorativa */
