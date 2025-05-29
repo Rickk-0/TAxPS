@@ -143,9 +143,10 @@
                     <div class="card">
                         <h4>Resta aggiornato</h4>
                         <p>Iscriviti alla nostra newsletter per ricevere aggiornamenti su eventi e novità di Torre Angela e Passoscuro</p>
-                        <form>
-                            <input type="email" placeholder="Inserisci la tua email">
-                            <button type="submit" class="btn btn-primary btn-block">Iscriviti</button>
+                        
+                        <form action="https://formspree.io/f/mblonbbv" method="POST" id="newsletterForm">
+                            <input type="email" name="email" placeholder="Inserisci la tua email" required id="emailInput">
+                            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Iscriviti</button>
                         </form>
                     </div>
                     <div class="social-icons">
@@ -174,6 +175,7 @@
   });
 </script>
 
+    <script src="./javascript/news-form.js"></script>
     <script src="./javascript/main.js"></script>
     <script src="./javascript/confronto-modal.js"></script>
     <script src="./javascript/social-dropdown.js"></script>
