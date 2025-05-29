@@ -105,7 +105,7 @@
     position: relative;
 }
 
-/* le origini e l'inizio di passoscuro */
+/* le origini e l'inizio di Torre Angela */
 .title-box-storia h3 {
     position: relative; /* l'elemento rimane nel flusso del layout, ma si può spostare visivamente */
     top: 2rem; /* per abbassare il titolo */
@@ -209,14 +209,14 @@
 }
 
 /* immagine di salvo d'acquisto */
-.img-salvodacquisto {
+.img-boomEdilizio {
     position: relative;
     margin-left: 2rem; /* per spostare l'immagine più a destra */
     margin-top: 2.5rem; /* per abbassare l'immagine */
 }
 
 /* modifche all'immagine che riguarda salvo d'acquisto */
-.img-salvodacquisto img {
+.img-boomEdilizio img {
     max-width: 620px; /* grandezza dell'immagine */
     border-radius: 10px;
     height: auto;
@@ -242,7 +242,7 @@
 }
 
 /* effetto zoom al passaggio del mouse, a tutte e due le immagini */
-.img-salvodacquisto img:hover,
+.img-boomEdilizio img:hover,
 .img-torredipalidoro img:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
