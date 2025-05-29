@@ -226,14 +226,14 @@
 }
 
 /* immagine della torre di palidoro */
-.img-torredipalidoro {
+.img-turrisAegidiAngeli {
     position: relative;
     margin-left: 43rem;
     margin-top: -22rem;
 }
 
 /* modifiche all'immagine che riguarda la torre di palidoro */
-.img-torredipalidoro img {
+.img-turrisAegidiAngeli img {
     max-width: 620px;
     border-radius: 10px;
     height: auto;
@@ -243,7 +243,7 @@
 
 /* effetto zoom al passaggio del mouse, a tutte e due le immagini */
 .img-boomEdilizio img:hover,
-.img-torredipalidoro img:hover {
+.img- img:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }

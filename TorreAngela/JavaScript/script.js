@@ -212,8 +212,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // elementi da osservare 
     const elementiOsservati = [
-        document.querySelector('.title-torredipalidoro-storia'),
-        document.querySelector('.p-3d-torredipalidoro')
+        document.querySelector('.title-turrisAegidiAngeli-storia'),
+        document.querySelector('.p-3d-turrisAegidiAngeli')
     ];
 
     elementiOsservati.forEach(elementi => {
