@@ -20,6 +20,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 17px;
     line-height: 1.6;
+    margin-bottom: 150px;
 }
 
 /* sottolinea */
@@ -28,4 +29,8 @@
     text-decoration-color: var(--primary-color);
     text-underline-offset: 4px; /* spazio tra la frase e il sottolineato */ 
     text-decoration-thickness: 2px; /* spessore */
+}
+
+.p-dopoguerra {
+    margin-bottom: 30px; /* Adjust value as needed */
 }
