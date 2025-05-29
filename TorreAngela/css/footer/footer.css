@@ -21,11 +21,10 @@ footer.show-footer {
 
 /* per separare i buttoni */
 .socialButtons {
-    position: absolute;
-    margin-left: 820px;
-    margin-top: -37px;
     display: flex;
     gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
 }
 
 /* modifica del pulsante per metterci instagram */
@@ -50,5 +49,6 @@ footer.show-footer {
     transition: transform 0.4s ease-in-out;
 }
 .socialButtons button:hover {
-    transform: scale(1.2);
+    transform: rotate(360deg);
+    transition: 2s;
 }
